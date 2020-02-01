@@ -1,171 +1,115 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <style>
-      /* Set the size of the div element that contains the map */
-      #map {
-        height: 900px;  /* The height is 400 pixels */
-        width: 100%;  /* The width is the width of the web page */
-       }
-       
-      body {font-family: Arial, Helvetica, sans-serif;}
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
 
-      /* The Modal (background) */
-      .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        padding-top: 100px; /* Location of the box */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-      }
-
-      /* Modal Content */
-      .modal-content {
-        background-color: #fefefe;
-        margin: auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%;
-      }
-
-      /* The Close Button */
-      .close {
-        color: #aaaaaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-      }
-
-      .close:hover,
-      .close:focus {
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
-      }
-    </style>
-<!-- css files -->
-    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' /><!-- bootstrap css -->
-    <link href="css/style.css" rel='stylesheet' type='text/css' /><!-- custom css -->
-    <link href="css/font-awesome.min.css" rel="stylesheet"><!-- fontawesome css -->
-	<!-- //css files -->
-  </head>
-  <body>
-   
-<!-- banner -->
-<section class="banner position-relative" id="home">
-	<div class="container">
-		<div class="banner-text">
-			<div class="slider-info">
-				<div class="agileinfo-logo mt-lg-5">
-					<h2>Hello Buddies<br> Study together</h2>
-					<a href="contact.html">Sign Up</a>
-					<a href="contact.html">Sign In</a>
-					
-				
-				</div>
-			</div>
-		</div>
-		<div class="choose text-center position-absolute d-lg-flex">
-			<div class="choose-icon">
-				<span class="fa fa-ship" aria-hidden="true"></span>
-				<div class=" choose-grid">
-					
-                    <!-- Trigger/Open The Modal -->
-                    <button id="myBtn">Post Group</button>
-
-                    <!-- The Modal -->
-                    <div id="myModal" class="modal">
-
-                      <!-- Modal content -->
-                      <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <p>Some text in the Modal..</p>
-                      </div>
-                    </div>
-                    
-				</div>
-			</div>
-			<div class="choose-icon">
-				<span class="fa fa-truck" aria-hidden="true"></span>
-				<div class="choose-grid">
-					<h3 class="mt-4">Search group</h3>
-					
-				</div>
-			</div>
-			<div class="choose-icon">
-				<span class="fa fa-ship" aria-hidden="true"></span>
-				<div class="choose-grid">
-					<h3 class="mt-4">Favirote place</h3>
-					
-				</div>
-			</div>
-			<div class="choose-icon">
-				<span class="fa fa-plane" aria-hidden="true"></span>
-				<div class="choose-grid">
-					<h3 class="mt-4">Hey friends</h3>
-					
-				</div>
-			</div>
-			<div class="choose-icon mr-0">
-				<span class="fa fa-truck" aria-hidden="true"></span>
-				<div class="choose-grid">
-					<h3 class="mt-4">Message Center</h3>
-					
-				</div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-</section>
-<div class="clearfix"></div>
-
-    <!--The div element for the map -->
-    <div id="map"></div>
-    <script>
-// Initialize and add the map
-function initMap() {
-  // The location of Uluru
-  var uluru = {lat: 40.4446, lng: -79.9533};
-  // The map, centered at Uluru
-  var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 15, center: uluru});
-  // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: uluru, map: map});
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-    // Get the modal
-    var modal = document.getElementById("myModal");
 
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
 
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
 
-    // When the user clicks the button, open the modal 
-    btn.onclick = function() {
-      modal.style.display = "block";
-    }
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
 
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
+<h2>Modal Example</h2>
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARZYHTrw_voBeSC2QsrbbZOar5rZlz1TU&callback=initMap">
-    </script>
-  </body>
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Open Modal</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Post a group!</p>
+    <!-- add a now or future button -->
+    <!DOCTYPE html>
+<html>
+   <head>
+      <title>Title of the document</title>
+   </head>
+   <body>
+      <button onclick="window.location.href = 'https://w3docs.com';">Now?</button>
+   </body>
+</html>
+
+<html>
+   <head>
+      <title>Title of the document</title>
+   </head>
+   <body>
+      <button onclick="window.location.href = 'https://w3docs.com';">Future?</button>
+   </body>
+</html>
+
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
 </html>
