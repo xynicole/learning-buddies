@@ -1,106 +1,85 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <style>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   <style>
       /* Set the size of the div element that contains the map */
       #map {
         height: 900px;  /* The height is 400 pixels */
         width: 100%;  /* The width is the width of the web page */
        }
     </style>
-<!-- css files -->
-    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' /><!-- bootstrap css -->
-    <link href="css/style.css" rel='stylesheet' type='text/css' /><!-- custom css -->
-    <link href="css/font-awesome.min.css" rel="stylesheet"><!-- fontawesome css -->
-	<!-- //css files -->
-  </head>
-  <body>
-   
-<!-- banner -->
-<section class="banner position-relative" id="home">
-	<div class="container">
-		<div class="banner-text">
-			<div class="slider-info">
-				<div class="agileinfo-logo mt-lg-5">
-					<h2>Hello Buddies<br> Study together</h2>
-					<a href="signup.html">Sign Up</a>
-					<a href="signin.html">Sign In</a>
-					
-				
-				</div>
-			</div>
-		</div>
-		<div class="choose text-center position-absolute d-lg-flex">
-			<div class="choose-icon">
-				<img src="image/post.png" alt="Flowers in Chania" width="40" height="40">
-				<div class=" choose-grid">
-					<h3 class="mt-4">Post group</h3>
-					<!-- Button trigger modal -->
-					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-					 Post Group
-					</button>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-					<!-- Modal -->
-					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					  <div class="modal-dialog" role="document">
-						<div class="modal-content">
-						  <div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							  <span aria-hidden="true">&times;</span>
-							</button>
-						  </div>
-						  <div class="modal-body">
-							...
-						  </div>
-						  <div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-							<button type="button" class="btn btn-primary">Save changes</button>
-						  </div>
-						</div>
-					  </div>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  
+  
+  <body>
+    <h1>Hello, world!</h1>
+	
+	
+	<!-- banner -->
+	<section class="banner position-relative" id="home">
+		<div class="container">
+			<div class="banner-text">
+				<div class="slider-info">
+					<div class="agileinfo-logo mt-lg-5">
+						<h2>Hello Buddies<br> Study together</h2>
+						<a href="signup.html">Sign Up</a>
+						<a href="signin.html">Sign In</a>
+						
+					
 					</div>
 				</div>
 			</div>
-				
-			<div class="choose-icon">
-				<img src="image/search.png" alt="Flowers in Chania" width="40" height="40">
-				<!-- <span class="fa fa-truck" aria-hidden="true"></span> -->
-				<div class="choose-grid">
-					<h3 class="mt-4">Search group</h3>
-					
-				</div>
-			</div>
-			<div class="choose-icon">
-				<img src="image/heart.png" alt="Flowers in Chania" width="40" height="40">
-				<div class="choose-grid">
-					<h3 class="mt-4">Favirote place</h3>
-					
-				</div>
-			</div>
-			<div class="choose-icon">
-				<img src="image/group.png" alt="Flowers in Chania" width="40" height="40">
-				<div class="choose-grid">
-					<h3 class="mt-4">Hey friends</h3>
-					
-				</div>
-			</div>
-			<div class="choose-icon mr-0">
-				<img src="image/message.png" alt="Flowers in Chania" width="40" height="40">
-				<div class="choose-grid">
-					<h3 class="mt-4">Message Center</h3>
-					
-				</div>
-			</div>
-			<div class="clearfix"></div>
 		</div>
-	</div>
-</section>
-<div class="clearfix"></div>
+	</section>
+			
+			
+	
+			
+	<div> 
+	<!-- Button trigger modal -->
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+	  Launch demo modal
+	</button>
 
-    <!--The div element for the map -->
-    <div id="map"></div>
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+			...
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			<button type="button" class="btn btn-primary">Save changes</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	</div>
+	
+		
+		
+	<div id="map"> <!-- sandbox 2-->
+		 
+	</div>
+	
+		 <!--The div element for the map -->
+    
     <script>
 		// Initialize and add the map
 		function initMap() {
@@ -111,23 +90,19 @@
 			  document.getElementById('map'), {zoom: 15, center: uluru});
 		  // The marker, positioned at Uluru
 		  var marker = new google.maps.Marker({position: uluru, map: map});
-		map.addListener('click', function(e) {
-    			 placeMarkerAndPanTo(e.latLng, map);
-		 });	
 		}
-function placeMarkerAndPanTo(latLng, map) {
-                var marker = new google.maps.Marker({ // create maker
-                    position: latLng,
-                    map: map
-                });
-                map.panTo(latLng); 
-            }	   
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARZYHTrw_voBeSC2QsrbbZOar5rZlz1TU&callback=initMap">
     </script>
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>sdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
 </html>
