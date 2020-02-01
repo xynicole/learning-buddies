@@ -111,7 +111,17 @@
 			  document.getElementById('map'), {zoom: 15, center: uluru});
 		  // The marker, positioned at Uluru
 		  var marker = new google.maps.Marker({position: uluru, map: map});
+		map.addListener('click', function(e) {
+    			 placeMarkerAndPanTo(e.latLng, map);
+		 });	
 		}
+function placeMarkerAndPanTo(latLng, map) {
+                var marker = new google.maps.Marker({ // create maker
+                    position: latLng,
+                    map: map
+                });
+                map.panTo(latLng); 
+            }	   
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARZYHTrw_voBeSC2QsrbbZOar5rZlz1TU&callback=initMap">
