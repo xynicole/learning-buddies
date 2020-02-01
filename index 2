@@ -20,12 +20,10 @@
     <link href="css/style.css" rel='stylesheet' type='text/css' /><!-- custom css -->
     <link href="css/font-awesome.min.css" rel="stylesheet"><!-- fontawesome css -->
 	<!-- //css files -->
-    <title>Hello, world!</title>
   </head>
   
   
   <body>
-    <h1>Hello, world!</h1>
 	
 	
 	<!-- banner -->
@@ -70,7 +68,7 @@
 			<div class="choose-icon">
 				<img src="image/heart.png" alt="Flowers in Chania" width="40" height="40">
 				<div class="choose-grid">
-					<h3 class="mt-4">Favirote place</h3>
+					<h3 class="mt-4">Favorite place</h3>
 					
 				</div>
 			</div>
