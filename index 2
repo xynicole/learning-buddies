@@ -15,7 +15,11 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+<!-- css files -->
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' /><!-- bootstrap css -->
+    <link href="css/style.css" rel='stylesheet' type='text/css' /><!-- custom css -->
+    <link href="css/font-awesome.min.css" rel="stylesheet"><!-- fontawesome css -->
+	<!-- //css files -->
     <title>Hello, world!</title>
   </head>
   
@@ -32,12 +36,54 @@
 					<div class="agileinfo-logo mt-lg-5">
 						<h2>Hello Buddies<br> Study together</h2>
 						<a href="signup.html">Sign Up</a>
-						<a href="signin.html">Sign In</a>
-						
-					
+						<a href="signin.html">Sign In</a>				
 					</div>
 				</div>
 			</div>
+			
+			<div class="choose text-center position-absolute d-lg-flex">
+			<div class="choose-icon">
+				<img src="image/post.png" alt="Flowers in Chania" width="40" height="40">
+				<div class=" choose-grid">
+					<h3 class="mt-4">Post group</h3>
+				<!-- Button trigger modal -->
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+		  Launch demo modal
+		</button>
+				</div>
+			</div>
+				
+			<div class="choose-icon">
+				<img src="image/search.png" alt="Flowers in Chania" width="40" height="40">
+				<!-- <span class="fa fa-truck" aria-hidden="true"></span> -->
+				<div class="choose-grid">
+					<h3 class="mt-4">Search group</h3>
+					
+				</div>
+			</div>
+			<div class="choose-icon">
+				<img src="image/heart.png" alt="Flowers in Chania" width="40" height="40">
+				<div class="choose-grid">
+					<h3 class="mt-4">Favirote place</h3>
+					
+				</div>
+			</div>
+			<div class="choose-icon">
+				<img src="image/group.png" alt="Flowers in Chania" width="40" height="40">
+				<div class="choose-grid">
+					<h3 class="mt-4">Hey friends</h3>
+					
+				</div>
+			</div>
+			<div class="choose-icon mr-0">
+				<img src="image/message.png" alt="Flowers in Chania" width="40" height="40">
+				<div class="choose-grid">
+					<h3 class="mt-4">Message Center</h3>
+					
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
 		</div>
 	</section>
 			
@@ -45,31 +91,26 @@
 	
 			
 	<div> 
-	<!-- Button trigger modal -->
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-	  Launch demo modal
-	</button>
-
-	<!-- Modal -->
-	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	  <div class="modal-dialog" role="document">
-		<div class="modal-content">
-		  <div class="modal-header">
-			<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			  <span aria-hidden="true">&times;</span>
-			</button>
-		  </div>
-		  <div class="modal-body">
-			...
-		  </div>
-		  <div class="modal-footer">
-			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-			<button type="button" class="btn btn-primary">Save changes</button>
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <div class="modal-body">
+				...
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			  </div>
+			</div>
 		  </div>
 		</div>
-	  </div>
-	</div>
 	</div>
 	
 		
