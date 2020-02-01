@@ -1,0 +1,454 @@
+html,
+body {
+    margin: 0;
+    font-size: 100%;
+    background: #fff;
+	font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body a {
+    text-decoration: none;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+						</div>
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+	font-family: 'Poppins', sans-serif;
+}
+
+body img {
+    max-width: 100%;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="text"],
+input[type="email"],
+input[type="search"] {
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+	color: #323648;
+}
+li {
+    list-style-type: none;
+}
+p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    color: #707579;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*-- header --*/
+
+header {
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+}
+
+.toggle,
+[id^=drop] {
+	display: none;
+}
+
+/* Giving a background-color to the nav container. */
+nav { 
+	margin:0;
+	padding: 0;
+}
+
+
+#logo a {
+	float: left;
+    font-size: .8em;
+    display: initial;
+    margin: 0;
+    letter-spacing: 0px;
+    color: #fff;
+    font-weight: 600;
+    padding: 3px 0;
+    border: none;
+}
+#logo a span.fa {
+    color: #00BCD4;
+}
+
+
+/* Since we'll have the "ul li" "float:left"
+ * we need to add a clear after the container. */
+
+nav:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+.tlinks{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
+/* Removing padding, margin and "list-style" from the "ul",
+ * and adding "position:reltive" */
+nav ul {
+	float: right;
+	padding:0;
+	margin:0;
+	list-style: none;
+	position: relative;
+	}
+	
+/* Positioning the navigation items inline */
+nav ul li {
+	margin: 0px;
+	display:inline-block;
+	float: left;
+	}
+
+/* Styling the links */
+nav a {
+    color: #ddd;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding-left: 0;
+    padding-right: 0;
+	padding: 10px 0;
+    font-size: 15px;
+}
+
+
+nav ul li ul li:hover { background: #f8f9fa; }
+
+/* Background color change on Hover */
+nav a:hover { 
+	color: #ddd;
+}
+nav .inner-dropdown a:hover {
+    color: #333;
+}
+.menu li.active  a{ 
+	color: #fff;
+}
+
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+nav ul ul {
+	display: none;
+	position: absolute; 
+	/* has to be the same number as the "line-height" of "nav a" */
+	top: 30px; 
+    background: #fff;
+    padding: 10px;
+}
+	
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display:inherit;
+}
+	
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+nav ul ul li a {
+    color: #333 !important;
+    padding: 5px 10px;
+    display: block;
+}
+
+/* Second, Third and more Tiers	
+ * We move the 2nd and 3rd etc tier dropdowns to the left
+ * by the amount of the width of the first tier.
+*/
+nav ul ul ul li {
+	position: relative;
+	top:-60px;
+	/* has to be the same number as the "width" of "nav ul ul li" */ 
+	left:170px; 
+}
+.login-icon a {
+    background: #03A9F4;
+    padding: 12px 25px;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 2px;
+    border-radius: 35px;
+    text-transform: uppercase;
+}
+
+.login-icon a:hover {
+    color: #03A9F4;
+    background: #fff;
+}
+
+/* Change ' +' in order to change the Dropdown symbol */
+li > a:only-child:after { content: ''; }
+
+
+/* Media Queries
+--------------------------------------------- */
+
+@media all and (max-width : 736px) {
+
+	#logo {
+		display: block;
+		padding: 0;
+		width: 100%;
+		text-align: center;
+		float: none;
+	}
+
+	.login-icon a {
+		padding: 11px 15px;
+	}
+	nav {
+		margin: 0;
+	}
+	nav a {
+		color: #333;
+	}
+
+	/* Hide the navigation menu by default */
+	/* Also hide the  */
+	.toggle + a,
+	.menu {
+		display: none;
+	}
+
+	/* Stylinf the toggle lable */
+	.toggle {
+		display: block;
+		padding: 7px 15px;
+		font-size: 17px;
+		text-decoration: none;
+		border: none;
+		float: right;
+		background-color: #00BCD4;
+		color: #fff;
+		border-radius: 0px;
+	}
+	.menu .toggle {
+		float: none;
+		text-align: center;
+		margin: auto;
+		width: auto;
+		padding: 5px;
+		font-weight: normal;
+		font-size: 15px;
+		letter-spacing: 1px;
+		background: none;
+		color: #333;
+	}
+
+	.toggle:hover {
+		color:#333;
+		background-color: #fff;
+	}
+
+	/* Display Dropdown when clicked on Parent Lable */
+	[id^=drop]:checked + ul {
+		display: block;
+		background: #fff;
+		padding: 15px 0;
+		width:100%;
+		text-align: center;
+	}
+
+	/* Change menu item's width to 100% */
+	nav ul li {
+		display: block;
+		width: 100%;
+		padding: 7px 0;
+		}
+	nav a{
+		padding: 5px 0;
+	}
+	nav a:hover {
+		color: #333;
+		border-bottom: 2px solid #333;
+	}
+	nav ul ul .toggle,
+	nav ul ul a {
+		padding: 0 40px;
+	}
+
+	nav ul ul ul a {
+		padding: 0 80px;
+	}
+
+	nav a:hover,
+ 	nav ul ul ul a {
+		background-color: transparent;
+	}
+  
+	nav ul li ul li .toggle,
+	nav ul ul a,
+	nav ul ul ul a{
+		padding:14px 20px;	
+		color:#FFF;
+		font-size:17px; 
+	}
+  
+  
+	nav ul li ul li .toggle,
+	nav ul ul a {
+		background-color: #fff; 
+	}
+	nav ul ul li a {
+		font-size: 15px;
+		display: inline-block;
+		border-bottom: 2px solid transparent;
+	}
+	ul.inner-ul{
+		padding: 0!important;
+	}
+	/* Hide Dropdowns by Default */
+	nav ul ul {
+		float: none;
+		position:static;
+		color: #ffffff;
+		/* has to be the same number as the "line-height" of "nav a" */
+	}
+		
+	/* Hide menus on hover */
+	nav ul ul li:hover > ul,
+	nav ul li:hover > ul {
+		display: none;
+	}
+		
+	/* Fisrt Tier Dropdown */
+	nav ul ul li {
+		display: block;
+		width: 100%;
+		padding: 0;
+	}
+
+	nav ul ul ul li {
+		position: static;
+		/* has to be the same number as the "width" of "nav ul ul li" */ 
+
+	}
+
+}
+
+@media all and (max-width : 330px) {
+
+	nav ul li {
+		display:block;
+		width: 94%;
+	}
+
+}
+.user span.fa {
+    font-size: 25px;
+    color: #fff;
+}
+.buttons li a:hover {
+    color: #fff;
+}
+.top_header p {
+    color: #eee;
+    float: right;
+}
+.top-grid span.fa {
+    font-size: 45px;
+    color: #eee;
+    float: right;
+}
+.top-grid p a{
+	color: #eee;
+}
+.top_header span.block {
+    display: block;
+    font-size: 12px;
+    color: #bbb;
+}
+.top_header{
+	text-align:right;
+}
+/*-- //header --*/
+
+
+/*-- banner --*/
+.banner {
+    background: url(../images/banner.png) no-repeat center;
+    background-size: cover;
+	position: relative;
+    height: 48vw;
+    margin-bottom: 7em;
+}
+.banner:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.45;
+	background: #000;
+}
+.slider-info {
+    position: relative;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+}
+.agileinfo-logo h2 {
+    color: #fff;
+    font-size: 3.5em;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.37);
+}
+.banner-text a {
+    color: #fff;
+    background: #00BCD4;
+    padding: 13px 35px;
+    display: inline-block;
+    letter-spacing: 1px;
+    margin-top: 1.5em;
+    border-radius: 4px;
+}
+
+.banner-text {
+    padding-top: 15vw ;
+}
+.banner ul.social li {
+    display: inline-block;
+    margin: 8px;
+}
+.banner  ul.social li  a{
+    font-size: 16px;
+    color: #eee;
+    line-height: 26px;
+    letter-spacing: 1px;
+    list-style-type: none;
+}
+/*-- //banner --*/
