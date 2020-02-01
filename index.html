@@ -1,53 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <style>
       /* Set the size of the div element that contains the map */
       #map {
         height: 900px;  /* The height is 400 pixels */
         width: 100%;  /* The width is the width of the web page */
        }
-	   
-	    body {font-family: Arial, Helvetica, sans-serif;}
-
-      /* The Modal (background) */
-      .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        padding-top: 0px; /* Location of the box */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-      }
-
-      /* Modal Content */
-      .modal-content {
-        background-color: #fefefe;
-        margin: auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 20%;
-      }
-
-      /* The Close Button */
-      .close {
-        color: #aaaaaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-      }
-
-      .close:hover,
-      .close:focus {
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
-      }
     </style>
 <!-- css files -->
     <link href="css/bootstrap.css" rel='stylesheet' type='text/css' /><!-- bootstrap css -->
@@ -76,28 +36,37 @@
 				<img src="image/post.png" alt="Flowers in Chania" width="40" height="40">
 				<div class=" choose-grid">
 					<h3 class="mt-4">Post group</h3>
-					                    <!-- Trigger/Open The Modal -->
-                    <button id="myBtn">Click</button>
-                    <!-- The Modal -->
-                    <div id="myModal" class="modal">
+					<!-- Button trigger modal -->
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+					 Post Group
+					</button>
 
-                      <!-- Modal content -->
-                      <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <p>Post Group</p>
-						<form action="/action_page.php">
-						Class Number: <input type="text" name="ClassNumber" value=""><br>
-						Time to Study: <input type="text" name="TimetoStudy" value=""><br>
-						<input type="submit" value="Submit">
-						
-                      </div>
-                    </div>
-					 <!-- Modal content -->
-                    
+					<!-- Modal -->
+					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					  <div class="modal-dialog" role="document">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							  <span aria-hidden="true">&times;</span>
+							</button>
+						  </div>
+						  <div class="modal-body">
+							...
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-primary">Save changes</button>
+						  </div>
+						</div>
+					  </div>
+					</div>
 				</div>
-				</div>
+			</div>
+				
 			<div class="choose-icon">
 				<img src="image/search.png" alt="Flowers in Chania" width="40" height="40">
+				<!-- <span class="fa fa-truck" aria-hidden="true"></span> -->
 				<div class="choose-grid">
 					<h3 class="mt-4">Search group</h3>
 					
@@ -133,54 +102,22 @@
     <!--The div element for the map -->
     <div id="map"></div>
     <script>
-// Initialize and add the map
-function initMap() {
-  // The location of Uluru
-  var uluru = {lat: 40.4446, lng: -79.9533};
-  // The map, centered at Uluru
-  var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 15, center: uluru});
-  // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: uluru, map: map});
-  map.addListener('click', function(e) {
-     placeMarkerAndPanTo(e.latLng, map);
- });	
-}
-function placeMarkerAndPanTo(latLng, map) {
-                var marker = new google.maps.Marker({ // create maker
-                    position: latLng,
-                    map: map
-                });
-                map.panTo(latLng); 
-            }	    
- // Get the modal
-    var modal = document.getElementById("myModal");
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks the button, open the modal 
-    btn.onclick = function() {
-      modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
+		// Initialize and add the map
+		function initMap() {
+		  // The location of Uluru
+		  var uluru = {lat: 40.4446, lng: -79.9533};
+		  // The map, centered at Uluru
+		  var map = new google.maps.Map(
+			  document.getElementById('map'), {zoom: 15, center: uluru});
+		  // The marker, positioned at Uluru
+		  var marker = new google.maps.Marker({position: uluru, map: map});
+		}
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARZYHTrw_voBeSC2QsrbbZOar5rZlz1TU&callback=initMap">
     </script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
 </html>
