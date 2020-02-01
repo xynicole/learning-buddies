@@ -8,7 +8,7 @@
         width: 100%;  /* The width is the width of the web page */
        }
        
-             body {font-family: Arial, Helvetica, sans-serif;}
+      body {font-family: Arial, Helvetica, sans-serif;}
 
       /* The Modal (background) */
       .modal {
@@ -138,7 +138,6 @@ function initMap() {
   // The marker, positioned at Uluru
   var marker = new google.maps.Marker({position: uluru, map: map});
 }
-    <script>
     // Get the modal
     var modal = document.getElementById("myModal");
 
@@ -164,7 +163,6 @@ function initMap() {
         modal.style.display = "none";
       }
     }
-    </script>
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARZYHTrw_voBeSC2QsrbbZOar5rZlz1TU&callback=initMap">
