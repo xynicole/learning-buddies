@@ -397,7 +397,7 @@ li > a:only-child:after { content: ''; }
 
 /*-- banner --*/
 .banner {
-    background: url(../images/banner.jpg) no-repeat center;
+    background: url(../images/banner.png) no-repeat center;
     background-size: cover;
 	position: relative;
     height: 48vw;
@@ -844,7 +844,7 @@ ul.links li a{
 
 /*-- inner page banner --*/
 .inner-banner {
-    background: url(../images/banner.jpg) no-repeat center;
+    background: url(../image/banner.jpg) no-repeat center;
     background-size: cover;
     min-height: 20vw;
 	position: relative;
