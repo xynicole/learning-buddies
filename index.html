@@ -122,11 +122,11 @@ function placeMarkerAndPanTo(latLng, map) {
                 });
                 map.panTo(latLng); 
             }	   
-    var infowindow = new google.maps.InfoWindow({ content: <p>"I'm X" <br />  "Studying CS"<br /><p>}); \
+    var infowindow = new google.maps.InfoWindow({ content: "I'm X" <br />  "Studying CS"<br />}); 
     infowindow.open(map, marker); //把这个infoWindow绑定在选定的marker上面
     //使用谷歌地图定义的事件，给这个marker添加点击事件
     google.maps.event.addListener(marker, "click", function () {
-      infowindow.open(map, marker);
+     infowindow.open(map, marker);
     });
 
     </script>
