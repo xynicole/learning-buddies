@@ -78,7 +78,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
       <button onclick="window.location.href = 'https://w3docs.com';">Future?</button>
    </body>
 </html>
-
+ <form action="/action_page.php">
+						Class Number: <input type="text" name="ClassNumber" value=""><br>
+						Time to Study: <input type="text" name="TimetoStudy" value=""><br>
+						<input type="submit" value="Submit">
+						</form>
   </div>
 
 </div>
