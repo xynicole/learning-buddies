@@ -127,8 +127,8 @@
 				Location Description <input type="text" name="Location Description" value=""><br>
 			  </div>
 			  <div class="modal-footer">
-				<button type="button" class="btn btn-primary">Create a map pin</button>
-				<button type="button" class="btn btn-primary">Post</button>
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Create a map pin</button>
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Post</button>
 			  </div>
 			</div>
 		  </div>
@@ -155,7 +155,7 @@
 				
 			  </div>
 			  <div class="modal-footer">
-				<button type="button" class="btn btn-primary">Search>
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Search</button>
 			  </div>
 			</div>
 		  </div>
@@ -175,10 +175,10 @@
 				</button>
 			  </div>
 			  <div class="modal-body">
-				Modal 3
+				<button type="button" class="btn btn-primary">Place a pin</button>
 			  </div>
 			  <div class="modal-footer">
-				<button type="button" class="btn btn-primary">Save Changes/button>
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Save Changes</button>
 			  </div>
 			</div>
 		  </div>
@@ -201,7 +201,7 @@
 				Search by Username: <input type="text" name="Search by Username" value=""><br>
 			  </div>
 			  <div class="modal-footer">
-				<button type="button" class="btn btn-primary">Save Changes/button>
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Save Changes</button>
 			  </div>
 			</div>
 		  </div>
@@ -224,8 +224,7 @@
 				Modal 5
 			  </div>
 			  <div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Save Changes/button>
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Save Changes</button>
 			  </div>
 			</div>
 		  </div>
@@ -260,7 +259,7 @@
                     map: map
                 });
                 map.panTo(latLng); 
-				
+				$('#exampleModal1').modal('show')
             }	 
 			
     </script>
