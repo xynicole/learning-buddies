@@ -275,8 +275,7 @@
          	var infowindow = new google.maps.InfoWindow();
         	 var matker, i;
        	 for (var i = 0; i < 5; i++) {
-          var results = [[40.44417, -79.95306,'CL'],[40.4432722, -79.9546972,'WPU'],[40.445526, -79.962574,'Residency Halls'],[40.4436, -79.9587, 'Benedum Hall'],[40.4426, -79.9542,'Hillman Library']]
-          console.log('results[i][0]');
+          var results = [[40.44417, -79.95306,'CL','Alex'],[40.4432722, -79.9546972,'WPU','Hockensmith'],[40.445526, -79.962574,'Residency Halls','Vines'],[40.4436, -79.9587, 'Benedum Hall','Bill'],[40.4426, -79.9542,'Hillman Library','Peter']]；
           var latLng = new google.maps.LatLng(results[i][0],results[i][1]);
           
           marker = new google.maps.Marker({
@@ -289,7 +288,7 @@
 
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
-          var popUpContent = '<h6>Hey, this\'s Alex</h6><h6>Studying INFSCI 1061</h6><h6>At '+ results[i][2]+'</h6>' +
+          var popUpContent = '<h6>Hey, this\'s ' + results[i][3]+ '</h6><h6>Studying INFSCI 1061</h6><h6>At '+ results[i][2]+'</h6>' +
                               '<h6>We have <span id="peopleNum">1</span> people</h6>' +
                               '<input type="button" class="btn btn-primary btn-sm mx-2" value="Message">' +
                              ' <input type="button" class="btn btn-primary btn-sm mx-2" value="Join" onClick="add()">' +
@@ -322,8 +321,12 @@ function add()
         {
          var x=document.getElementById("peopleNum").innerHTML;
 
-         x=parseInt(x)-1;
-         document.getElementById("peopleNum").innerHTML=x;
+        if(x > 1){
+            x=parseInt(x)-1;
+            document.getElementById("peopleNum").innerHTML=x;
+         }else{
+            marker.setMap(null);
+         }
         }
 function placeMarkerAndPanTo(latLng, map) {
                 var marker = new google.maps.Marker({ // create maker
