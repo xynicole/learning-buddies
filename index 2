@@ -66,23 +66,38 @@
 				</div>
 			</div>
 			<div class="choose-icon">
-				<img src="image/heart.png" alt="Flowers in Chania" width="40" height="40">
+				
 				<div class="choose-grid">
 					<h3 class="mt-4">Favorite place</h3>
+					<!-- Button trigger modal -->
+		<button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal3">
+		<img src="image/heart.png" alt="Flowers in Chania" width="40" height="40">
+		
+		</button>
 					
 				</div>
 			</div>
 			<div class="choose-icon">
-				<img src="image/group.png" alt="Flowers in Chania" width="40" height="40">
+				
 				<div class="choose-grid">
 					<h3 class="mt-4">Hey friends</h3>
+						<!-- Button trigger modal -->
+		<button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal4">
+		<img src="image/group.png" alt="Flowers in Chania" width="40" height="40">
+		
+		</button>
 					
 				</div>
 			</div>
 			<div class="choose-icon mr-0">
-				<img src="image/message.png" alt="Flowers in Chania" width="40" height="40">
+				
 				<div class="choose-grid">
 					<h3 class="mt-4">Message Center</h3>
+							<!-- Button trigger modal -->
+		<button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal5">
+		<img src="image/message.png" alt="Flowers in Chania" width="40" height="40">
+		
+		</button>
 					
 				</div>
 			</div>
@@ -95,22 +110,25 @@
 	
 			
 	<div> 
-		<!-- Modal -->
+		<!-- Modal 1-->
 		<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		  <div class="modal-dialog" role="document">
 			<div class="modal-content">
 			  <div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+				<h5 class="modal-title" id="exampleModalLabel">Post a new session</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				  <span aria-hidden="true">&times;</span>
 				</button>
 			  </div>
 			  <div class="modal-body">
-				Modal 1
+				Host Name: <input type="text" name="Host Name" value=""><br>
+				Class Number: <input type="text" name="ClassNumber" value=""><br>
+				Cell-phone number (optional) <input type="text" name="Cell phone number" value=""><br>
+				Location Description <input type="text" name="Location Description" value=""><br>
 			  </div>
 			  <div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Save changes</button>
+				<button type="button" class="btn btn-primary">Create a map pin</button>
+				<button type="button" class="btn btn-primary">Post</button>
 			  </div>
 			</div>
 		  </div>
@@ -120,7 +138,7 @@
 	
 				
 	<div> 
-		<!-- Modal -->
+		<!-- Modal 2 -->
 		<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		  <div class="modal-dialog" role="document">
 			<div class="modal-content">
@@ -131,11 +149,83 @@
 				</button>
 			  </div>
 			  <div class="modal-body">
-				Modal 2
+				Class Number: <input type="text" name="ClassNumber" value=""><br>
+				Time Range: <input type="text" name="Time Range" value=""><br>
+				<button type="button" class="btn btn-primary">Pick a location</button>
+				
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-primary">Search>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	</div>
+	
+	
+		<div> 
+		<!-- Modal 3 -->
+		<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <div class="modal-body">
+				Modal 3
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-primary">Save Changes/button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	</div>
+	
+	
+		<div> 
+		<!-- Modal 4 -->
+		<div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <div class="modal-body">
+				Search by Username: <input type="text" name="Search by Username" value=""><br>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-primary">Save Changes/button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	</div>
+	
+	
+		<div> 
+		<!-- Modal 5 -->
+		<div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <div class="modal-body">
+				Modal 5
 			  </div>
 			  <div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Save changes</button>
+				<button type="button" class="btn btn-primary">Save Changes/button>
 			  </div>
 			</div>
 		  </div>
@@ -170,6 +260,7 @@
                     map: map
                 });
                 map.panTo(latLng); 
+				
             }	 
 			
     </script>
