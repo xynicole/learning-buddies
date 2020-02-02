@@ -339,14 +339,16 @@ function add()
          x=parseInt(x)+1;
          document.getElementById("peopleNum").innerHTML=x;
         }
-
-
  function sub()
         {
          var x=document.getElementById("peopleNum").innerHTML;
 
-         x=parseInt(x)-1;
-         document.getElementById("peopleNum").innerHTML=x;
+        if(x > 1){
+            x=parseInt(x)-1;
+            document.getElementById("peopleNum").innerHTML=x;
+         }else{
+            marker.setMap(null);
+         }
         }
 function placeMarkerAndPanTo(latLng, map) {
                 var marker = new google.maps.Marker({ // create maker
